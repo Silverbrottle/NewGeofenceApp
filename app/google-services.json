@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "238330284448",
+    "firebase_url": "https://mccproject-44b46.firebaseio.com",
+    "project_id": "mccproject-44b46",
+    "storage_bucket": "mccproject-44b46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238330284448:android:ea88d4e05a083862663cc5",
+        "android_client_info": {
+          "package_name": "sfitproject.mcc.newgeofenceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238330284448-q5rceg195i0clqvmrcq5d1coq83qq8ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPStckrgmE1z55vpVc7ojxhBpLX7HPFgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238330284448-q5rceg195i0clqvmrcq5d1coq83qq8ri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
