@@ -7,31 +7,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MapsActivity">
-    <Button android:id="@+id/RadiusButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="right|bottom"
-    android:text="Set Radius"
-    android:padding="10dp"
-    android:layout_marginTop="20dp"
-    android:paddingRight="10dp"/>
-    <Button android:id="@+id/SaveButton"
-        android:layout_width="wrap_content"
-        android:drawableLeft="@drawable/ic_baseline_save_24"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:text="Save Geo-Point"
-        android:padding="10dp"
-        android:layout_marginTop="20dp"
-        android:paddingRight="10dp"/>
-    <Button
-        android:id="@+id/HistoryButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|left"
-        android:drawableLeft="@drawable/ic_baseline_history_24"
-        android:text="History"
-        android:gravity="center"
-        android:padding="10dp"
-        android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/RadiusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_baseline_radio_button_unchecked_24"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Set Radius"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/SaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_baseline_save_24"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Save Geo-Point"
+            />
+
+        <Button
+            android:id="@+id/HistoryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_baseline_history_24"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="History"
+            />
 </fragment>

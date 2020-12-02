@@ -1,18 +1,6 @@
 package sfitproject.mcc.newgeofenceapp;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
-
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentActivity;
-
 import android.Manifest;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.DialogInterface;
@@ -22,7 +10,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
-import android.text.format.Time;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -40,18 +27,20 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.Timestamp;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.GeoPoint;
+
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentActivity;
 
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapLongClickListener {
@@ -262,10 +251,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         FirebaseFirestore database = FirebaseFirestore.getInstance();
                         String mydate = DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
                         Map <String,Object> locdetails= new HashMap<>();
-                        locdetails.put("Coordinates",lL);
+                        Double lat=lL.latitude;
+                        Double longitude=lL.longitude;
+                        locdetails.put("Latitude",lat);
+                        locdetails.put("Longitude",longitude);
                         locdetails.put("Radius",rad);
                         locdetails.put("Time",mydate);
-                        database.collection("Location Capture")
+                        database.collection("LocData1")
                                 .add(locdetails)
                                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                     @Override

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NewGeoFenceApp</string>
+    <string name="app_name">GeoFence App</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_splash">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
